@@ -3,6 +3,7 @@ pipeline {
   environment {
       IMAGEPATH = "gyanko/world-of-games:${BUILD_NUMBER}"
   }
+  
   stages {
     stage('Checkout') {
       steps {
