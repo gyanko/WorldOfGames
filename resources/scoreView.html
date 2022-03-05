@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scores</title>
+</head>
+<body>
+<style>
+    * {
+    font-family: 'Arial';
+    }
+    td {
+        height: 50px;
+        width: 200px;
+        vertical-align: center;
+    }
+    table, thead, td {
+        border: 1px solid black;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .heading-style {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+</style>
+    <h1 class="center">The scores</h1>
+    <br/>
+    <div id="scores">
+        <table class="center">
+            <thead class="heading-style">
+                <td>Username</td><td>Score</td>
+            </thead>
+            <tbody>
+                {% for key, value in scores.items() %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td id="score_{{ key }}">{{ value }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  score-server:
+    build: .
+    image: ${IMAGEPATH}
+    ports:
+      - "8777:4000"
+    container_name: score-server
